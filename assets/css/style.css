@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* - - - - - - - - - - - - */
+/* Mainpage Configurations */
+/* - - - - - - - - - - - - */
 
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -23,6 +18,9 @@ body {
   background: linear-gradient(#2b1055, #7597de);
 }
 
+/* - - - - - - - - */
+/* Header - Navbar */
+/* - - - - - - - - */
 header {
   position: absolute;
   top: 0;
@@ -68,6 +66,9 @@ header ul li a.active {
   color: #2b1055;
 }
 
+/* - - - - - - - - - - - - -  */
+/* Parallax Background - Main */
+/* - - - - - - - - - - - - -  */
 #parallax {
   position: relative;
   width: 100vw;
@@ -128,6 +129,9 @@ header ul li a.active {
   transform: translateY(100px);
 }
 
+/* - - - - - - - */
+/* Main Sections */
+/* - - - - - - - */
 .section {
   display: flex;
   justify-content: center;
@@ -161,6 +165,9 @@ h2 {
   align-items: center;
 }
 
+/* - - - - - - - - - */
+/* Fade-in Animation */
+/* - - - - - - - - - */
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -173,6 +180,9 @@ h2 {
   opacity: 1;
 }
 
+/* - - - - - - -  */
+/* Gallery Images */
+/* - - - - - - -  */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,6 +201,9 @@ h2 {
   transform: scale(0.9);
 }
 
+/* -- - - - - -  */
+/* Modal Gallery */
+/* -- - - - - -  */
 .modal {
   position: fixed;
   height: 100%;
@@ -232,4 +245,13 @@ h2 {
 .modal.appear .modalImg,
 .modal.appear .modalTxt {
   animation: zoom 0.3s linear;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
