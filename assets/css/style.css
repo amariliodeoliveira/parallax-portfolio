@@ -217,34 +217,58 @@ h2 {
   opacity: 0;
   pointer-events: none;
 }
+
 .modalContent {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 .modalImg {
   width: 80%;
   max-width: 700px;
 }
+
 .modalTxt {
   margin-top: 1em;
 }
-.close {
+
+.modalNav button {
+  padding: 20px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.arrowBtn {
+  height: 3em;
+}
+
+.closeBtn {
   position: absolute;
   top: 1em;
   right: 1.5em;
   font-size: 1.5em;
   cursor: pointer;
 }
+
 .modal.appear {
   opacity: 1;
   pointer-events: all;
 }
+
 .modal.appear .modalImg,
 .modal.appear .modalTxt {
   animation: zoom 0.3s linear;
+}
+
+.body-no-scroll {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 @keyframes zoom {
