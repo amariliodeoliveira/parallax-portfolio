@@ -36,7 +36,6 @@ body {
 /* Header - Navbar */
 /* - - - - - - - - */
 header {
-  background-color: var(--darkPurple);
   position: absolute;
   top: 0;
   left: 0;
@@ -50,10 +49,11 @@ header {
 }
 
 header .logo {
+  margin-top: 20px;
   color: var(--white);
   font-weight: 700;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s all ease;
@@ -71,16 +71,22 @@ header ul {
 }
 
 header ul li {
+  margin-top: 20px;
   margin-left: 20px;
   margin-right: 40px;
 }
 
 header ul li a {
+  font-size: 1.2em;
+  padding: 6px 15px;
   color: var(--white);
+  border-radius: 20px;
   transition: 0.3s all ease;
 }
 
-header nav ul li:hover {
+header nav ul li a:hover {
+  background: var(--white);
+  color: var(--russianViolet);
   transform: scale(1.1);
 }
 
@@ -118,23 +124,29 @@ header nav ul li:hover {
   pointer-events: none;
 }
 
+#parallax img#stars {
+  z-index: 0;
+}
+
 #parallax img#moon {
-  margin-top: 5%;
   mix-blend-mode: screen;
 }
 
 #parallax img#mountains_front {
+  width: 100vw;
+  height: 100vh;
   z-index: 10;
 }
 
-#text {
+/* #text {
   position: absolute;
   transform: translateX(300px);
+  transform: translateY(-80px);
   color: var(--white);
   white-space: nowrap;
-  font-size: 7.5vw;
+  font-size: 5vw;
   z-index: 9;
-}
+} */
 
 #btn {
   text-decoration: none;
@@ -183,6 +195,10 @@ header nav ul li:hover {
   max-width: 900px;
   justify-content: center;
   align-items: center;
+}
+
+.first {
+  margin-top: -50px;
 }
 
 /* - - - - - - - - - */
@@ -366,7 +382,6 @@ h4 span {
 #gallery {
   padding-bottom: 48px;
 }
-
 
 @keyframes zoom {
   from {
