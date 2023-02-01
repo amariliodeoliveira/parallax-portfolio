@@ -10,23 +10,38 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+:root {
+  --white: #ffffff;
+  --cornflowerBlue: #7597de;
+  --blueVioletCrayola: #695bae;
+  --russianViolet: #2b1055;
+  --darkPurple: #1c0522;
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(#2b1055, #7597de);
+  background: linear-gradient(var(--russianViolet), var(--cornflowerBlue));
+}
+
+.links {
+  color: var(--cornflowerBlue);
 }
 
 /* - - - - - - - - */
 /* Header - Navbar */
 /* - - - - - - - - */
 header {
+  background-color: var(--darkPurple);
   position: absolute;
   top: 0;
   left: 0;
+  height: auto;
   width: 100vw;
-  padding: 30px 5%;
+  padding: 4px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,15 +49,16 @@ header {
 }
 
 header .logo {
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 header ul {
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,16 +70,15 @@ header ul li {
 }
 
 header ul li a {
+  height: 100vh;
   text-decoration: none;
-  padding: 6px 15px;
-  color: #fff;
-  border-radius: 20px;
+  color: var(--white);
 }
 
 header ul li a:hover,
 header ul li a.active {
-  background: #fff;
-  color: #2b1055;
+  background: var(--white);
+  color: var(--russianViolet);
 }
 
 /* - - - - - - - - - - - - -  */
@@ -86,7 +101,7 @@ header ul li a.active {
   bottom: 0;
   width: 100vw;
   height: 100px;
-  background: linear-gradient(to top, #1c0522, transparent);
+  background: linear-gradient(to top, var(--darkPurple), transparent);
   z-index: 1000;
 }
 
@@ -101,6 +116,7 @@ header ul li a.active {
 }
 
 #parallax img#moon {
+  margin-top: 5%;
   mix-blend-mode: screen;
 }
 
@@ -111,7 +127,7 @@ header ul li a.active {
 #text {
   position: absolute;
   transform: translateX(300px);
-  color: #fff;
+  color: var(--white);
   white-space: nowrap;
   font-size: 7.5vw;
   z-index: 9;
@@ -122,8 +138,8 @@ header ul li a.active {
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
-  background: #fff;
-  color: #2b1055;
+  background: var(--white);
+  color: var(--russianViolet);
   font-size: 1.5em;
   z-index: 9;
   transform: translateY(100px);
@@ -137,25 +153,26 @@ header ul li a.active {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 100px 100px 0px 100px;
-  background: #1c0522;
+  padding: 50px 100px 0px 100px;
+  background: var(--darkPurple);
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 0px;
+  min-width: 90vw;
 }
 
 .section h1,
-h2 {
+.section h2 {
   display: flex;
   justify-content: center;
-  font-size: 3.5em;
+  font-size: 48px;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--white);
 }
 
 .section p {
-  font-size: 1em;
-  color: #fff;
+  font-size: 16px;
+  color: var(--white);
 }
 
 .content {
@@ -163,6 +180,79 @@ h2 {
   max-width: 900px;
   justify-content: center;
   align-items: center;
+}
+
+/* - - - - - - - - - */
+/* LinkTree - Navbar */
+/* - - - - - - - - - */
+.linkTree {
+  display: grid;
+  width: 100%;
+  height: auto;
+  min-width: 90vw;
+  padding: 50px 200px 0px 200px;
+}
+
+.linkTree ul li:before {
+  content: "";
+  margin-left: -20px;
+}
+
+.linkTree ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.linkTree ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.linkTree ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  background: url("../img/banner_transparent_left.png") no-repeat left top /
+      contain,
+    url("../img/banner_transparent_right.png") no-repeat right top / contain;
+  background-color: var(--cornflowerBlue);
+  color: #210002;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 32px;
+  width: 320px;
+  height: 36px;
+}
+
+.banner img {
+  margin-right: 8px;
+}
+
+.banner:hover {
+  background-color: var(--white);
+}
+
+/* - - - - - - - - - */
+/* LinkTree - Navbar */
+/* - - - - - - - - - */
+.aboutMeContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+  grid-gap: 10%;
 }
 
 /* - - - - - - - - - */
@@ -211,7 +301,7 @@ h2 {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  color: var(--white);
   z-index: 1;
   overflow: auto;
   opacity: 0;
