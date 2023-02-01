@@ -11,6 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   text-decoration: none;
+  list-style: none;
 }
 
 :root {
@@ -55,6 +56,11 @@ header .logo {
   font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: 0.3s all ease;
+}
+
+header .logo:hover {
+  transform: scale(1.1);
 }
 
 header ul {
@@ -65,20 +71,17 @@ header ul {
 }
 
 header ul li {
-  list-style: none;
   margin-left: 20px;
+  margin-right: 40px;
 }
 
 header ul li a {
-  height: 100vh;
-  text-decoration: none;
   color: var(--white);
+  transition: 0.3s all ease;
 }
 
-header ul li a:hover,
-header ul li a.active {
-  background: var(--white);
-  color: var(--russianViolet);
+header nav ul li:hover {
+  transform: scale(1.1);
 }
 
 /* - - - - - - - - - - - - -  */
@@ -186,9 +189,6 @@ header ul li a.active {
 /* LinkTree - Navbar */
 /* - - - - - - - - - */
 .linkTree {
-  display: grid;
-  width: 100%;
-  height: auto;
   min-width: 90vw;
   padding: 50px 200px 0px 200px;
 }
@@ -202,7 +202,6 @@ header ul li a.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
-  margin: 0;
   text-transform: uppercase;
   font-size: 18px;
 }
@@ -211,14 +210,7 @@ header ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style: none;
   margin-left: 20px;
-}
-
-.linkTree ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .banner {
@@ -228,13 +220,19 @@ header ul li a.active {
   background-color: var(--cornflowerBlue);
   color: #210002;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   margin-bottom: 32px;
   width: 320px;
   height: 36px;
+
+  transition: 0.3s all ease;
+}
+
+.banner h4,
+h4 span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner img {
@@ -243,11 +241,12 @@ header ul li a.active {
 
 .banner:hover {
   background-color: var(--white);
+  transform: scale(1.05);
 }
 
-/* - - - - - - - - - */
-/* LinkTree - Navbar */
-/* - - - - - - - - - */
+/* - - - - - - - - -  */
+/* About Me - Content */
+/* - - - - - - - - -  */
 .aboutMeContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -360,6 +359,14 @@ header ul li a.active {
   height: 100vh;
   overflow: hidden;
 }
+
+/* -- - - - - - - */
+/* Temporary Code */
+/* -- - - - - - - */
+#gallery {
+  padding-bottom: 48px;
+}
+
 
 @keyframes zoom {
   from {
