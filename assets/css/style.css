@@ -1,9 +1,11 @@
+/* - - - - - - - */
+/* Fonts Imports */
+/* - - - - - - - */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* - - - - - - - - - - - - */
 /* Mainpage Configurations */
 /* - - - - - - - - - - - - */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +17,7 @@
 }
 
 :root {
-  --white: #ffffff;
+  --white: #eeefff;
   --cornflowerBlue: #7597de;
   --blueVioletCrayola: #695bae;
   --russianViolet: #2b1055;
@@ -36,31 +38,40 @@ body {
 /* Header - Navbar */
 /* - - - - - - - - */
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  width: 100vw;
-  padding: 4px 5%;
   display: flex;
+  flex-wrap: wrap;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 3% 0px;
   z-index: 10000;
 }
 
 header .logo {
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--white);
-  font-weight: 700;
+  font-size: 24px;
   text-decoration: none;
-  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.3s all ease;
 }
 
-header .logo:hover {
-  transform: scale(1.1);
+header .logo h1:hover {
+  transform: scale(1.05);
+}
+
+header .codeTag {
+  font-weight: bold;
+  color: var(--cornflowerBlue);
+  font-size: 32px;
+  letter-spacing: normal;
+  margin-right: 10px;
 }
 
 header ul {
@@ -71,16 +82,14 @@ header ul {
 }
 
 header ul li {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 40px;
+  margin-left: 2em;
 }
 
 header ul li a {
   font-size: 1.2em;
-  padding: 6px 15px;
   color: var(--white);
-  border-radius: 20px;
+  padding: 8px 30px;
+  border-radius: 40px;
   transition: 0.3s all ease;
 }
 
@@ -90,15 +99,19 @@ header nav ul li a:hover {
   transform: scale(1.1);
 }
 
+header nav {
+  max-width: 100%;
+}
+
 /* - - - - - - - - - - - - -  */
 /* Parallax Background - Main */
 /* - - - - - - - - - - - - -  */
 #parallax {
+  display: flex;
   position: relative;
   width: 100vw;
   height: 100vh;
   padding: 100px;
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -129,6 +142,7 @@ header nav ul li a:hover {
 }
 
 #parallax img#moon {
+  object-fit: cover;
   mix-blend-mode: screen;
 }
 
@@ -149,7 +163,6 @@ header nav ul li a:hover {
 } */
 
 #btn {
-  text-decoration: none;
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
@@ -165,18 +178,16 @@ header nav ul li a:hover {
 /* - - - - - - - */
 .section {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 50px 100px 0px 100px;
+  padding: 50px 250px 25px 250px;
   background: var(--darkPurple);
   text-align: justify;
   text-justify: inter-word;
   margin-bottom: 0px;
-  min-width: 90vw;
 }
 
-.section h1,
 .section h2 {
   display: flex;
   justify-content: center;
@@ -190,36 +201,20 @@ header nav ul li a:hover {
   color: var(--white);
 }
 
-.content {
-  width: 80em;
-  max-width: 900px;
-  justify-content: center;
-  align-items: center;
-}
-
-.first {
-  margin-top: -50px;
-}
-
 /* - - - - - - - - - */
 /* LinkTree - Navbar */
 /* - - - - - - - - - */
-.linkTree {
-  min-width: 90vw;
-  padding: 50px 200px 0px 200px;
+.linkTree ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 28px 60px;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
 .linkTree ul li:before {
   content: "";
   margin-left: -20px;
-}
-
-.linkTree ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-  text-transform: uppercase;
-  font-size: 18px;
 }
 
 .linkTree ul li {
@@ -236,7 +231,6 @@ header nav ul li a:hover {
   background-color: var(--cornflowerBlue);
   color: #210002;
 
-  margin-bottom: 32px;
   width: 320px;
   height: 36px;
 
@@ -257,7 +251,6 @@ h4 span {
 
 .banner:hover {
   background-color: var(--white);
-  transform: scale(1.05);
 }
 
 /* - - - - - - - - -  */
@@ -265,9 +258,20 @@ h4 span {
 /* - - - - - - - - -  */
 .aboutMeContent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 20px;
-  grid-gap: 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+#aboutMe h2 {
+  font-family: "Vollkorn", serif;
+  font-style: bold italic;
+  font-weight: 600;
+}
+
+.aboutMeContent p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* - - - - - - - - - */
@@ -311,8 +315,8 @@ h4 span {
 /* -- - - - - -  */
 .modal {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -376,9 +380,21 @@ h4 span {
   overflow: hidden;
 }
 
-/* -- - - - - - - */
-/* Temporary Code */
-/* -- - - - - - - */
+/* -- - - - - - - - - - - -*/
+/* Temporary Code - Footer */
+/* -- - - - - - - - - - - -*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blueVioletCrayola);
+}
+
+footer p {
+  font-size: 14px;
+  padding: 0.5em 0;
+}
+
 #gallery {
   padding-bottom: 48px;
 }
@@ -389,5 +405,61 @@ h4 span {
   }
   to {
     transform: scale(1);
+  }
+}
+
+/* -- - - - - - - - -*/
+/* Media Query - 880 */
+/* -- - - - - - - - -*/
+@media (max-width: 880px) {
+  /* Header */
+  header {
+    justify-content: center;
+  }
+
+  header ul li {
+    margin-left: auto;
+  }
+
+  /* Main */
+  .section {
+    padding: 50px 20px 0px 20px;
+  }
+
+  /* LinkTree - Navbar */
+  #linkTree {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .linkTree ul {
+    grid-gap: 1em 50px;
+  }
+
+  .linkTree ul li {
+    justify-content: space-between;
+  }
+
+  .banner {
+    width: 250px;
+    height: 50px;
+  }
+
+  /* About Me */
+  .aboutMeContent {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio */
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -- - - - - - - - -*/
+/* Media Query - 600 */
+/* -- - - - - - - - -*/
+@media (max-width: 600px) {
+  .linkTree ul {
+    grid-template-columns: 1fr;
   }
 }

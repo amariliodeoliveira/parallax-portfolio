@@ -8,25 +8,37 @@
 
     <!-- Links -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
+    <!-- Scripts -->
+    <script defer src="./assets/js/parallax.js"></script>
+    <script defer src="./assets/js/animation-fadein.js"></script>
+    <script defer src="./assets/js/img-modal.js"></script>
+
+    <!-- Close Modal Button -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/7368c40b21.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <header>
-      <a href="#" class="logo">Amarilio</a>
-
+      <a href="#" class="logo">
+        <p class="codeTag">&lt;&frasl;&gt;</p>
+        <h1>Amarilio</h1>
+      </a>
       <nav>
         <ul class="topnav" id="myTopnav">
-          <li><a href="#aboutMe">Sobre Mim</a></li>
+          <li><a href="#linkTree">Contatos</a></li>
           <li><a href="#gallery">Portfolio</a></li>
         </ul>
       </nav>
@@ -37,7 +49,7 @@
       <img src="./assets/img/moon.png" id="moon" />
       <img src="./assets/img/mountains_behind.png" id="mountains_behind" />
       <!-- <h2 id="text">Front-End Developer</h2> -->
-      <a href="#sec" id="btn">Explore</a>
+      <a href="#aboutMe" id="btn">Sobre Mim</a>
       <img src="./assets/img/firstLayer.svg" id="mountains_front" />
     </section>
 
@@ -71,9 +83,6 @@
                 </h4></a
               >
             </li>
-          </ul>
-
-          <ul>
             <li>
               <a
                 class="banner"
@@ -115,17 +124,18 @@
       </section>
 
       <section class="section" id="aboutMe">
-        <article class="content">
-          <h1>Prazer, Amarilio de Oliveira!</h1>
+        <article>
+          <h2>Sobre Mim</h2>
           <div class="aboutMeContent">
             <p>
               Tenho 28 anos e resido em Fortaleza, no Ceará. Sou aluno do 4º
               semestre de Bacharelado em Sistemas de Informação pela UniFanor -
               Wyden e da formação como Desenvolvedor Full Stack pela Digital
               College. Apaixonado por criar experiências interativas e
-              envolventes para usuários como desenvolvedor front-end. <br />
-              <br />
+              envolventes para usuários como desenvolvedor front-end.
+            </p>
 
+            <p>
               Com habilidades em HTML, CSS e JavaScript, tenho uma paixão por
               transformar designs complexos em páginas web funcionais e
               acessíveis. Sempre busco aprimorar minhas habilidades e estou
@@ -138,13 +148,15 @@
               pós-graduação em Gestão e Negócios pela Faculdade das Americas
               (FAM). Por 2 anos, fui estudante de Bacharelado em Engenharia da
               Computação no Instituto Federal do Ceará (IFCE) em meados de 2011,
-              onde fui admitido na primeira tentativa. <br /><br />
+              onde fui admitido na primeira tentativa.
+            </p>
 
+            <p>
               Em transição profissional para trabalhar com o que amo, buscando
               aprimorar minhas habilidades e conhecer novas tecnologias no
               mercado. Se procura por um profissional apaixonado, com
               mentalidade colaborativa, entre em contato comigo para ver como
-              posso ajudar em seus projetos
+              posso ajudar em seus projetos.
             </p>
           </div>
         </article>
@@ -190,54 +202,10 @@
           </div>
         </div>
       </section>
-
-      <!-- <section class="section" id="info">
-        <div class="content">
-          <h2>Informações</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            cum cumque recusandae quibusdam nulla unde! Repellat aliquid
-            perspiciatis nisi dolorem. Recusandae nisi quam ullam sequi
-            similique, libero repellendus facere hic. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Deleniti, labore odio molestiae
-            excepturi ut cupiditate nam vel repudiandae fugiat? Perferendis esse
-            maxime eum minima itaque cumque reiciendis tempora cum obcaecati?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit enim
-            necessitatibus reiciendis officiis est tempore, saepe cumque! Odit
-            libero optio, similique officia deserunt quasi perspiciatis
-            repudiandae possimus dignissimos qui aperiam? <br /><br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            corrupti sit temporibus eaque soluta natus facilis culpa officiis
-            omnis facere assumenda officia consectetur, possimus asperiores
-            deserunt odit nesciunt velit necessitatibus. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Quod laborum ex, facilis beatae,
-            aperiam consectetur cum aut dolores labore doloremque incidunt
-            provident! Qui, necessitatibus? Vero numquam sint ipsam omnis
-            cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing
-            elit. Repudiandae vero quibusdam quo iusto esse, id, mollitia, eos
-            voluptatibus sint molestiae tempora et. Provident eos quam esse
-            doloribus cum modi nemo! <br />
-            <br />
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam sunt
-            nobis error odio quibusdam perspiciatis voluptate laboriosam
-            recusandae? Atque, rem. Obcaecati quo sequi temporibus beatae
-            blanditiis ratione illum? Sapiente, consequuntur? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Quaerat dicta architecto
-            accusamus est cum impedit minima praesentium necessitatibus nobis ut
-            expedita id recusandae illo obcaecati deleniti molestiae, inventore
-            optio vero.
-          </p>
-        </div>
-      </section> -->
     </main>
 
-    <!-- Scripts -->
-    <script src="./assets/js/parallax.js"></script>
-    <script src="./assets/js/animation-fadein.js"></script>
-    <script src="./assets/js/img-modal.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7368c40b21.js"
-      crossorigin="anonymous"
-    ></script>
+    <footer>
+      <p>Todos os direitos reservados © 2023</p>
+    </footer>
   </body>
 </html>
