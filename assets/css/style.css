@@ -146,7 +146,7 @@ header nav {
   mix-blend-mode: screen;
 }
 
-#parallax img#mountains_front {
+#parallax img#firstLayer {
   width: 100vw;
   height: 100vh;
   z-index: 10;
@@ -225,9 +225,8 @@ header nav {
 }
 
 .banner {
-  background: url("../img/banner_transparent_left.png") no-repeat left top /
-      contain,
-    url("../img/banner_transparent_right.png") no-repeat right top / contain;
+  background: url("../img/bannerLeft.png") no-repeat left top / contain,
+    url("../img/bannerRight.png") no-repeat right top / contain;
   background-color: var(--cornflowerBlue);
   color: #210002;
 
@@ -254,22 +253,76 @@ h4 span {
 }
 
 /* - - - - - - - - -  */
-/* About Me - Content */
+/* About Me - Oficial */
+/* - - - - - - - - -  */
+#quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quoteContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 500px;
+  height: auto;
+}
+
+.quoteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.quoteHeader div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.quoteHeader img {
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.quoteHeader h3 {
+  font-family: "Vollkorn", serif;
+  text-align: left;
+  color: var(--white);
+  font-size: 32px;
+}
+
+.quoteHeader p {
+  text-align: left;
+  font-style: oblique;
+  font-weight: 600;
+  color: var(--cornflowerBlue);
+}
+
+.quote q {
+  display: flex;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+/* - - - - - - - - -  */
+/* About Me 2 */
 /* - - - - - - - - -  */
 .aboutMeContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-
-#aboutMe h2 {
-  font-family: "Vollkorn", serif;
-  font-style: bold italic;
-  font-weight: 600;
+  grid-gap: 50px;
 }
 
 .aboutMeContent p {
-  font-family: "Poppins", sans-serif;
+  text-indent: 2em;
+  font-size: 16px;
+  font-style: oblique;
   font-weight: 400;
   line-height: 1.6;
 }
