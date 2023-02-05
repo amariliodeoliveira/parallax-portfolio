@@ -201,6 +201,10 @@ header nav {
   color: var(--white);
 }
 
+.limit {
+  max-width: 800px;
+}
+
 /* - - - - - - - - - */
 /* LinkTree - Navbar */
 /* - - - - - - - - - */
@@ -349,7 +353,7 @@ h4 span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
-  grid-gap: 1em;
+  grid-gap: 50px;
   margin: 0;
 }
 
@@ -448,8 +452,8 @@ footer p {
   padding: 0.5em 0;
 }
 
-#gallery {
-  padding-bottom: 48px;
+.gallery {
+  margin-bottom: 30px;
 }
 
 @keyframes zoom {
